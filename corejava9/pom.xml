@@ -10,7 +10,7 @@
 		<!-- Если в исходниках содержится кириллица, задаем -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4jVersion>1.7.2</slf4jVersion>
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>1.8</jdk.version>
 	</properties>
   <build>
 		<plugins>
