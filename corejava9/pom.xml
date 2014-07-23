@@ -1,18 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>epk.sam.ebooks</groupId>
-  <artifactId>corejava9</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-   
-  <description>book code ported to maven</description>
-  	<!-- обязан добавить это свойство, чтоб не было предупреждений! -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>epk.sam.ebooks</groupId>
+	<artifactId>corejava9</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<description>book code ported to maven</description>
+	<!-- обязан добавить это свойство, чтоб не было предупреждений! -->
 	<properties>
 		<!-- Если в исходниках содержится кириллица, задаем -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4jVersion>1.7.2</slf4jVersion>
 		<jdk.version>1.8</jdk.version>
 	</properties>
-  <build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -43,9 +44,7 @@
 						<verbose />
 						<!-- path.separator можно глянуть в hudson/systemInfo -->
 						<bootclasspath>${java.home}/lib/rt.jar${path.separator}${env.JAVA_HOME}/lib/tools.jar</bootclasspath>
-						<!-- 
-						<bootclasspath>${env.JAVA_HOME}/lib/tools.jar</bootclasspath>
-						 --> 
+						<!-- <bootclasspath>${env.JAVA_HOME}/lib/tools.jar</bootclasspath> -->
 					</compilerArguments>
 				</configuration>
 			</plugin>
@@ -129,10 +128,21 @@
 			<version>1.2.17</version>
 		</dependency>
 
+		<!-- As of JDK 7.0, the JNLP API is being provided by the javaws.jar file 
+			in your JRE's lib directory, i.e., ${java.home}/lib/javaws.jar. It is possible 
+			to use the maven dependency scope system. -->
+		<dependency>
+			<groupId>javax.jnlp</groupId>
+			<artifactId>jnlp-api</artifactId>
+			<version>7.0</version>
+			<scope>system</scope>
+			<systemPath>${java.home}/lib/javaws.jar</systemPath>
+		</dependency>
+
 	</dependencies>
-  
-  
-  
-  
-  
+
+
+
+
+
 </project>
