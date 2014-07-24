@@ -139,6 +139,27 @@
 			<systemPath>${java.home}/lib/javaws.jar</systemPath>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.5.0-b01</version>
+		</dependency>
+
+	<!-- Apache Derby Client JDBC Driver -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbyclient</artifactId>
+			<version>10.10.2.0</version>
+		</dependency>
+
+<!-- Apache Derby Database Engine and Embedded JDBC Driver -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.10.2.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 
